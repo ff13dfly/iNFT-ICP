@@ -14,7 +14,7 @@ ICP hack house project, try to deploy the editor of iNFT on ICP.
 
 - On my macbook, the command can not run directly. The bin files are here `/Users/{YOUR_MACBOOK_USER_NAME}/Library/Application Support/org.dfinity.dfx/bin`. Change to this folder, run `./dfx --version` to confirm the application run properly.
 
-- Try to start the server to check. Note, the `command + c` way can not stop the  
+- Try to start the server to check. Note, close the VPN, or you will get a 503 error.  
 
     ```BASH
         # normal suggestion.
@@ -26,12 +26,30 @@ ICP hack house project, try to deploy the editor of iNFT on ICP.
     ```
 
     ```BASH
-        Running dfx start for version 0.16.1
-        Using the default definition for the 'local' shared network because /Users/<username>/.config/dfx/networks.json does not exist.
-        Dashboard: http://localhost:49846/_/dashboard
+        # My success message
+        Running dfx start for version 0.19.0
+        Using the default definition for the 'local' shared network because /Users/fuzhongqiang/.config/dfx/networks.json does not exist.
+        Initialized replica.
+        Dashboard: http://localhost:62575/_/dashboard
     ```
 
-- 
+    The snap here.
+    ![dashboard snap](snaps/dashboard.png)
+
+- Create `dfx.json` and `package.json` properly, try to deploy the app on ICP. Note, the `Node` version should be >20, here is the guard [https://betterstack.com/community/questions/how-to-upgrade-node-js-on-macos/](https://betterstack.com/community/questions/how-to-upgrade-node-js-on-macos/).
+
+    ```BASH
+        dfx deploy
+    ```
+
+    If you are the first time to run, need to set up your account, try to generate a new one.
+
+    ```BASH
+        dfx identity new YOUR_NAME
+    ```
+
+    Then, take a coffee as normal way when compiling the code, you will get this.
+    ![Depoying](snaps/deploying.png)
 
 ### Links
 
