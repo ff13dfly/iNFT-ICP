@@ -1,12 +1,12 @@
 # iNFT-ICP
-ICP hack house project, try to deploy the editor of iNFT on ICP.
 
+ICP hack house project, try to deploy the editor of iNFT on ICP.
 
 ## Resource
 
 ### How to
 
-- Set up the env for ICP. There is details about the installaction here [https://dacade.org/zh/communities/icp/courses/typescript-smart-contract-101/learning-modules/b14741ea-ee33-43a4-a742-9cdc0a6f0d1c](https://dacade.org/zh/communities/icp/courses/typescript-smart-contract-101/learning-modules/b14741ea-ee33-43a4-a742-9cdc0a6f0d1c). Note, the `DFX` installaction need you to press `Enter` on `Proceed with installation (default)`, it is better to `Proceed with installation (press Enter to continue)`. I am waiting here for more than 15 mins, haha. And, use arrow button to select the menu.
+- Set up the env for ICP. There is details about the installaction here [https://dacade.org/zh/communities/icp/courses/typescript-smart-contract-101/learning-modules/b14741ea-ee33-43a4-a742-9cdc0a6f0d1c](https://dacade.org/zh/communities/icp/courses/typescript-smart-contract-101/learning-modules/b14741ea-ee33-43a4-a742-9cdc0a6f0d1c). **Note**, the `DFX` installaction need you to press `Enter` on `Proceed with installation (default)`, it is better to `Proceed with installation (press Enter to continue)`. I am waiting here for more than 15 mins, haha. And, use arrow button to select the menu.
 
     ```BASH
         sh -ci "$(curl -fsSL https://internetcomputer.org/install.sh)"
@@ -48,8 +48,19 @@ ICP hack house project, try to deploy the editor of iNFT on ICP.
         dfx identity new YOUR_NAME
     ```
 
-    Then, take a coffee as normal way when compiling the code, you will get this.
+    Then, take a coffee as normal way when compiling the code, you will get this. **Note**, there will be error if you forget to install some tools, such as `podman` as I did.
+
     ![Depoying](snaps/deploying.png)
+
+    The second time to deploy the Dapps.
+
+    ![Depoying](snaps/deploying_normal.png)
+
+    **Note**, the `npx azle message_board` failed after run `yarn install`, need to run `yarn add @dfinity/principal` by checking the error message. 
+
+    Finally, deployed successful. Now, 30% job done !
+    ![success](snaps/success.png)
+    ![success](snaps/message_board.png)
 
 ### Links
 
