@@ -23,8 +23,7 @@ import express from 'express';
 class Message {
    id: string;
    title: string;          //template name for iNFT
-   body: string;           //JSON string of the definition
-   attachmentURL: string;  //
+   definition: string;           //JSON string of the definition
    createdAt: Date;
    updatedAt: Date | null
 }
@@ -34,6 +33,10 @@ const messagesStorage = StableBTreeMap<string, Message>(0);
 export default Server(() => {
    const app = express();
    app.use(express.json());
+
+   app.post("/test", (req, res) => {
+      res.json({hello:"world"});
+   });
 
    app.post("/template", (req, res) => {
       const message: Message =  {id: uuidv4(), createdAt: getCurrentDate(), ...req.body};
