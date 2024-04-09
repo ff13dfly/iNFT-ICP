@@ -74,6 +74,36 @@ ICP hack house project, try to deploy the editor of iNFT on ICP.
 
     Great, response from the on chain application.
 
+### Mainnet
+
+- Get the airdrop.
+
+    ```BASH
+        dfx wallet redeem-faucet-coupon 3CA44-8C685-DE4CC --ic
+    ```
+
+    You will get the response as follow.
+    ![Airdrop](snaps/airdrop.png)
+
+- Deploy the **Template** Dapp on ICP mainnet.
+
+    ```BASH
+        dfx deploy --ic
+    ```
+
+    You will get the response as follow.
+    ![Deploy on mainnet done](snaps/done.png)
+
+- Check the result
+
+    ```BASH
+        #check from the bash
+        curl -X POST https://i6tq5-ziaaa-aaaap-ahaia-cai.icp0.io/test
+
+        #The result, great hello world
+        {"hello":"world"}
+    ```
+
 ### Links
 
 - [https://internetcomputer.org/docs](https://internetcomputer.org/docs)
