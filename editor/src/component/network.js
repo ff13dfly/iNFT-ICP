@@ -1,7 +1,5 @@
 import { Row, Col } from "react-bootstrap";
-import { useEffect, useState } from "react";
-
-import Mocker from "./mock";
+import { useEffect } from "react";
 
 function Network(props) {
     const size = {
@@ -45,7 +43,6 @@ function Network(props) {
                 <h3>iNFT Editor</h3>
             </Col>
             <Col className="text-left" lg={size.head[1]} xl={size.head[1]} xxl={size.head[1]} >
-                <Mocker fresh={props.fresh} update={props.update} />
             </Col>
             <Col className="text-left" lg={size.head[2]} xl={size.head[2]} xxl={size.head[2]} >
                

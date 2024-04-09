@@ -10,17 +10,10 @@ import Network from "./component/network";
 import Preview from "./component/preview";
 import Puzzle from "./component/puzzle";
 
-import Multi from "./component/multi";
-
 import NFT from "./component/nft";
 import Detail from "./component/detail";
-import Solana from "./component/opt_solana";
-import AptOS from "./component/opt_aptos";
 
-// import IPFS from "./lib/IPFS";
-// import Solana_test from "./test/solana";
-import AptOS_test from "./test/aptos";
-//import IPFS_test from "./test/ipfs";
+import ICP from "./component/opt_ICP";
 
 function App() {
 
@@ -57,10 +50,7 @@ function App() {
                 <Basic fresh={self.fresh} update={update}/>
               </Col>
               <Col lg={size.opt[1]} xl={size.opt[1]} xxl={size.opt[1]} >
-                {/* <Operation fresh={self.fresh} update={update}/> */}
-                <Multi fresh={self.fresh} update={update}/>
-                {/* <Solana fresh={self.fresh} update={update}/> */}
-                {/* <AptOS fresh={self.fresh} update={update}/> */}
+                <ICP fresh={self.fresh} update={update}/>
               </Col>
             </Row>
           </Col>

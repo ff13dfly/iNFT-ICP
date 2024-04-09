@@ -38,12 +38,16 @@ export default Server(() => {
       res.json({hello:"world"});
    });
 
+   app.get("/test", (req, res) => {
+      res.json({hello:"ICP is easy to start,just coding..."});
+   });
+
    app.post("/template", (req, res) => {
       const message: Message =  {id: uuidv4(), createdAt: getCurrentDate(), ...req.body};
       messagesStorage.insert(message.id, message);
       res.json(message);
    });
-
+   
    app.get("/template", (req, res) => {
       res.json(messagesStorage.values());
    });
