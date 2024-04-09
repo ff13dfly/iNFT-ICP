@@ -62,6 +62,18 @@ ICP hack house project, try to deploy the editor of iNFT on ICP.
     ![success](snaps/success.png)
     ![success](snaps/message_board.png)
 
+- Checking the response by the following command lines:
+
+    ```BASH
+        #command
+        curl -X POST http://bkyz2-fmaaa-aaaaa-qaaaq-cai.localhost:8066/messages -H "Content-type: application/json" -d '{"title": "todo list", "body": "some important things", "attachmentURL": "url/path/to/some/photo/attachment"}'
+
+        #Result
+        {"id":"b458518d-e851-4ffa-b6dd-133809c0fe1c","createdAt":"2024-04-09T04:32:32.514Z","title":"todo list","body":"some important things","attachmentURL":"url/path/to/some/photo/attachment"}
+    ```
+
+    Great, response from the on chain application.
+
 ### Links
 
 - [https://internetcomputer.org/docs](https://internetcomputer.org/docs)
